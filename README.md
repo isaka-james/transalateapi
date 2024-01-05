@@ -1,1 +1,1 @@
-# Flask Translation Application
+# Flask Translation Application (API)
