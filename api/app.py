@@ -5,7 +5,9 @@ from flask_cors import CORS
 from flask import Response
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes 
+#CORS(app)  # Enable CORS for all routes 
+cors = CORS(app, resources={r"/translate": {"origins": "*", "methods": ["*"], "allow_headers": ["*"]}})
+
 
 
 def translate_texts_to_swahili(texts, to_language):
