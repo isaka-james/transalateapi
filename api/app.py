@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
 from translate import Translator
-from flask_cors import CORS
+#from flask_cors import CORS
+
+from flask import Response
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes 
+#CORS(app)  # Enable CORS for all routes 
 
 
 def translate_texts_to_swahili(texts, to_language):
@@ -18,7 +20,7 @@ def translate_texts_to_swahili(texts, to_language):
     
 @app.route('/')
 def home():
-    return '<h1 style="text-align:center"> Welcome to the translateapi! </h1><p> Want to use this api? check this <a href="https://github.com/reprogamaco/transalateapi/">documentation</a>.</p>'
+    return '<h1 style="text-align:center"> Welcome to the translateapi! </h1><p style="margin: 10%"> Want to use this api? check this <a href="https://github.com/reprogamaco/transalateapi/">documentation</a>.</p>'
 
 
 @app.route('/translate', methods=['POST', 'GET', 'OPTIONS'])
@@ -63,6 +65,15 @@ def translate():
             "error": str(e)
         }
         return jsonify(result), 500
+
+
+
+
+@current_app.before_request
+def basic_authentication():
+    if request.method.lower() == 'options':
+        return Response()
+        
 
 if __name__ == '__main__':
     app.run(debug=True)
