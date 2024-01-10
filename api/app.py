@@ -69,7 +69,7 @@ def translate():
 
 
 
-@current_app.before_request
+@app.before_request
 def basic_authentication():
     if request.method.lower() == 'options':
         return Response()
