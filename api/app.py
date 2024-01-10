@@ -5,7 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 #CORS(app)  # Enable CORS for all routes => It didn't work it only worked in command line
 
-cors = CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]}}) # Just allow from all origins
+cors = CORS(app, resources={r"/translate": {"origins": "*", "methods": ["POST"], "allow_headers": ["*"]}}) # Just allow from all origins
 
 def translate_texts_to_swahili(texts, to_language):
     translator = Translator(to_lang=to_language)
