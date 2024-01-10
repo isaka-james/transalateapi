@@ -15,8 +15,13 @@ def translate_texts_to_swahili(texts, to_language):
         translations_swahili.append(translation)
 
     return translations_swahili
+    
+@app.route('/')
+def home():
+    return '<h1 style="text-align:center"> Welcome to the translateapi! </h1><p> Want to use this api? check this <a href="https://github.com/reprogamaco/transalateapi/">documentation</a>.</p>'
 
-@app.route('/translate', methods=["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"])
+
+@app.route('/translate', methods=['POST', 'GET', 'OPTIONS'])
 def translate():
     try:
         # get the request from the client
