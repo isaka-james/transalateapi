@@ -1,11 +1,11 @@
 from flask import Flask, request, jsonify
 from translate import Translator
-#from flask_cors import CORS
+from flask_cors import CORS
 
 from flask import Response
 
 app = Flask(__name__)
-#CORS(app)  # Enable CORS for all routes 
+CORS(app)  # Enable CORS for all routes 
 
 
 def translate_texts_to_swahili(texts, to_language):
