@@ -48,7 +48,7 @@ def translate():
 
             result = {
                 "success": True,
-                "translations_swahili": translated_texts_swahili
+                "translations": translated_texts_swahili
             }
 
             return jsonify(result)
