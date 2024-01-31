@@ -5,8 +5,8 @@ from flask_cors import CORS
 from flask import Response
 
 app = Flask(__name__)
-#CORS(app)  # Enable CORS for all routes 
-cors = CORS(app, resources={r"/translate": {"origins": "*", "methods": ["*"], "allow_headers": ["*"]}})
+CORS(app)  # Enable CORS for all routes 
+# cors = CORS(app, resources={r"/translate": {"origins": "*", "methods": ["*"], "allow_headers": ["*"]}})
 
 
 
