@@ -122,7 +122,7 @@ If the translation is successful, the API responds with the following structure:
 ```json
 {
     "success": true,
-    "translations_swahili": ["Translated Text 1", "Translated Text 2", ...]
+    "translations": ["Translated Text 1", "Translated Text 2", ...]
 }
 ```
 
