@@ -1,8 +1,11 @@
 # Flask Translation Application (API) Documentation
+<img src="https://komarev.com/ghpvc/?username=transalateapi&label=transalateapi&color=0e75b6&style=flat" alt="since 21 Feb,2024" />
 
 ## Overview
 
 This documentation provides comprehensive details on the Flask Translation Application API, a powerful tool designed for translating sentences into various languages. The API endpoint, [translateapi.vercel.app/translate](https://translateapi.vercel.app/translate), exclusively caters to POST requests at present.
+
+❌ Remember not **translate**, it is **tra❌nsalateapi**.
 
 ## Making API Requests
 
