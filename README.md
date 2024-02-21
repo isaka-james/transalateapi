@@ -5,7 +5,7 @@
 
 This documentation provides comprehensive details on the Flask Translation Application API, a powerful tool designed for translating sentences into various languages. The API endpoint, [translateapi.vercel.app/translate](https://translateapi.vercel.app/translate), exclusively caters to POST requests at present.
 
-❌ Remember not **translate**, it is **tra❌nsalateapi**.
+❌ Remember not **translate**, it is **transalateapi**.
 
 ## Making API Requests
 
